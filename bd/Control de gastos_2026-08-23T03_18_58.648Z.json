@@ -1,0 +1,1523 @@
+{
+  "tables": [
+    {
+      "id": "hrp1mBrMV3OvAv_S7DVpV",
+      "name": "usuario",
+      "x": -879.9591594093351,
+      "y": -235.47361008978132,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_usuario",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "ALy5b3iXXEGpTJeFLEX1X"
+        },
+        {
+          "id": "ZuT_BbigxKpRIdz-QkHZT",
+          "name": "nombre",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "sLC8mLll08rPkjuR0wJ97",
+          "name": "correo",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "m3w9P7IWuZUxCqiPcAooh",
+          "name": "fecha_creacion",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "B__Ny2pDnmdGrIeNwFmlS",
+      "name": "cuenta",
+      "x": -355.9920654296875,
+      "y": -282.8553924560547,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_cuenta",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "AAkxb5kMPwwDlxGC3-WMF"
+        },
+        {
+          "id": "tDEHweTretxYTtfuRrLjn",
+          "name": "nombre",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "OjD8tDUH1QhOp4jEGcenK",
+          "name": "tipo",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "6CtP2ngD65SbQMJEY3bjd",
+          "name": "total",
+          "type": "NUMERIC",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "values": []
+        },
+        {
+          "id": "RMpaFAaaYjIGegmvMXA39",
+          "name": "id_usuario",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "FloLb4giGihHxRHeC_CpO",
+          "name": "id_moneda",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "no-ci2U2q1Lhw16gvLtdm",
+      "name": "movimiento",
+      "x": 13.167030593355321,
+      "y": -280.5668778889185,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_movimiento",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "0GtQhyWtyC4viJiYk2v0q"
+        },
+        {
+          "id": "bTn_Q2BXKhD05jrVBcsMC",
+          "name": "tipo",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "PzvuOADcd5wvDJS9r7tdO",
+          "name": "estado",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "ygfPGRIhZw3yl0Igcf-1a",
+          "name": "observaciones",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "NTFCSKxoKjY_wKdX1blAs",
+          "name": "monto",
+          "type": "NUMERIC",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "values": []
+        },
+        {
+          "id": "i3SoQpu0xWmjJ0nI0LDMe",
+          "name": "monto_real",
+          "type": "NUMERIC",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": ""
+        },
+        {
+          "id": "4xAY04Cd5nhKhpZ3ImFcT",
+          "name": "fecha_transaccion",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "ontFm2o14fy3GEmL6D7BS",
+          "name": "fecha_creacion",
+          "type": "TIMESTAMP",
+          "default": "now()",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "15Hq7kt4otS3bl2wnhEob",
+          "name": "fecha_actualizacion",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "AB67F504tKsIlQCXsHXXM",
+          "name": "id_categoria",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "qwm-1PqWWPie8PtO-PK8D",
+          "name": "id_cuenta",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "XIH-siDhDpZgAvYdosfHP",
+          "name": "id_moneda",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "Zf1M6MkXGHvKN2AzmrL4A",
+          "name": "id_comercio",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "sg6EkWj_084Y5GI5U4xld",
+          "name": "id_movimiento_padre",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "uF8sJ6JIyjnP87pm77s15",
+      "name": "categoria",
+      "x": -392.1793823242188,
+      "y": 89.44537353515625,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_categoria",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "41vQgabq2uTVFeDL4JzZo"
+        },
+        {
+          "id": "zvCQRiiXoE6ljRRr3t4-H",
+          "name": "nombre",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "--ImM26N8UxkqClJwHz-h",
+          "name": "tipo",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "mmDN3YCU6lj5Ec4HbnFyp",
+          "name": "id_usuario",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "pDKVf62MSpVYIb5QjuObh",
+          "name": "id_categoria_padre",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "b2BxXVxOjm9PFWAM0I9rp",
+      "name": "documento",
+      "x": 451.421181441571,
+      "y": -129.3205854188099,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_documento",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "2w5hYqquZP3P5Sga2A9aF"
+        },
+        {
+          "id": "CYXk8lQubnOxVC1-EFsAd",
+          "name": "id_movimiento",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "UW_7tiL62pOliBqqOQLdG",
+          "name": "nombre",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "KyLobJjwpWzs1y_IVAneN",
+          "name": "tipo",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "yP6fZVqNv-sokovwP0r94",
+          "name": "tamanio",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "PKKw3HWI197b0O0yHMLrb",
+      "name": "moneda",
+      "x": -41.14161669789496,
+      "y": -514.335416300349,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_moneda",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "_-rhDVSIF6jGxM86zDEr-"
+        },
+        {
+          "id": "aUWL5qaiv8gSJHeaAkGPb",
+          "name": "nombre",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "2c45jboLt1v5ZmOShBOaj",
+          "name": "simbolo",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 255
+        },
+        {
+          "id": "CjY4c8nejqiaWPxPstgox",
+          "name": "codigo",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 3
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "oV1nCfLZ-EtFJb5pnZida",
+      "name": "comercio",
+      "x": -427.0976341292558,
+      "y": 459.88704004846005,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_comercio",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "oVUQLhtGQ0V8OwwH8VvD_"
+        },
+        {
+          "id": "KG9xxcifj4C0FGwWS4rVb",
+          "name": "nombre",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "d5u3Vp3ja17lSLSsepDCo",
+          "name": "direccion",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "Ua6qDda2iuwKE2U5zRtpe",
+          "name": "id_usuario",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "3YwQ6eHadkELNCu7xGLso",
+      "name": "recurrencia",
+      "x": 317.5697135232439,
+      "y": 261.4629907106225,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_recurrencia",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "JrqmunwYPjdOzgW9aWuUi"
+        },
+        {
+          "id": "GQan-7JqpMJlaYkc2rzdC",
+          "name": "nombre",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "VrNvMtnFwjT6MA7C1TJKU",
+          "name": "frecuencia",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "grr16-Svpvaz9XgEaSY1V",
+          "name": "tipo",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "7rwZDZzjWAaP7sinyyuaV",
+          "name": "fecha_inicio",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "jlcc9e1muZRM_EmAOV0AO",
+          "name": "fecha_fin",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "71G1QYHgUPs96CRjKi62c",
+          "name": "activo",
+          "type": "BOOLEAN",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "4Xb1zJMpa0-Fi7H02VpLw",
+          "name": "id_usuario",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "mex5x3BElX6_0pxes81Wu",
+          "name": "id_categoria",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "6DenkE0F4pUPQuy8WNTXW",
+          "name": "id_movimiento",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "EfV0ryoNNlFRYO96dZWgT",
+      "name": "tarjeta_credito",
+      "x": -298.4794431765874,
+      "y": -733.6111469179812,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_tarjeta_credito",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "eyeBtFpQ7WEtSreBvrAes"
+        },
+        {
+          "id": "xvsY_9FPH0up5Qr4qvLY_",
+          "name": "limite",
+          "type": "NUMERIC",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": ""
+        },
+        {
+          "id": "WcO94FK5jgQ7ObceCActD",
+          "name": "dia_cierre",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "WvNEa6BkBFJUdzjiJP9qn",
+          "name": "dia_vencimiento",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "cfugcxpDJrb4ClPhojQuW",
+          "name": "id_cuenta",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "brzA8J5Je56DRtSKnekGx",
+      "name": "etiqueta",
+      "x": -792.7619764434744,
+      "y": -559.1753570499999,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_etiqueta",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "f_nBdL04J_-8gmQObdp7p"
+        },
+        {
+          "id": "hm-NoxlAzO05Ij9ZDae-d",
+          "name": "id_usuario",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "m4D_31abXyERw5eorUo4L",
+          "name": "nombre",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "J3A16gZdFSk-kPaTWay0C",
+          "name": "tipo",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "p5tWt2UEmzbyH1vTr1NDs",
+      "name": "etiqueta_movimiento",
+      "x": -361.89249483600844,
+      "y": -483.09972305139615,
+      "locked": false,
+      "fields": [
+        {
+          "id": "-MiE3ReP0sjA7ZzrQLhDi",
+          "name": "id_movimiento",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "id_etiqueta",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "yFbbM7CF3oCOgYGHNBt8P"
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "ZDY_Cs6EhxySUFFWgzRHG",
+      "name": "producto",
+      "x": 518.3483048851878,
+      "y": -590.7942570843828,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_producto",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "GP2G7CCGsSGJp7-POr1Hy"
+        },
+        {
+          "id": "L0ekxkqumuE8kZ28mrprY",
+          "name": "id_usuario",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "sG8xYLhSSNZB4y83gDktU",
+          "name": "nombre",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "1hgBZsr0eHdDFH5QilnIr",
+          "name": "url",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "faO8EhVADe-ZVmwXtpJB3",
+          "name": "fecha_compra",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "QL7Yg5-CwOL6pteGqoayH",
+          "name": "fecha_llegada",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "VAVPgRJz9jwnaurmWeL43",
+          "name": "total",
+          "type": "NUMERIC",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": ""
+        },
+        {
+          "id": "-jx4_t3v1zWTb27mdBJY-",
+          "name": "id_movimiento",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "O55ph3a92lZPV1vgK0ToZ",
+          "name": "id_comercio",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    }
+  ],
+  "relationships": [
+    {
+      "startTableId": "no-ci2U2q1Lhw16gvLtdm",
+      "startFieldId": "qwm-1PqWWPie8PtO-PK8D",
+      "endTableId": "B__Ny2pDnmdGrIeNwFmlS",
+      "endFieldId": "AAkxb5kMPwwDlxGC3-WMF",
+      "cardinality": "many_to_one",
+      "fields": [
+        {
+          "startFieldId": "qwm-1PqWWPie8PtO-PK8D",
+          "endFieldId": "AAkxb5kMPwwDlxGC3-WMF"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_movimiento_id_cuenta_cuenta",
+      "id": "greoXjWBMIqCAlra3WvPE"
+    },
+    {
+      "startTableId": "no-ci2U2q1Lhw16gvLtdm",
+      "startFieldId": "AB67F504tKsIlQCXsHXXM",
+      "endTableId": "uF8sJ6JIyjnP87pm77s15",
+      "endFieldId": "41vQgabq2uTVFeDL4JzZo",
+      "cardinality": "many_to_one",
+      "fields": [
+        {
+          "startFieldId": "AB67F504tKsIlQCXsHXXM",
+          "endFieldId": "41vQgabq2uTVFeDL4JzZo"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_movimiento_id_categoria_categoria",
+      "id": "YA3ztMKEsW1k3_jt2wBiA"
+    },
+    {
+      "startTableId": "b2BxXVxOjm9PFWAM0I9rp",
+      "startFieldId": "CYXk8lQubnOxVC1-EFsAd",
+      "endTableId": "no-ci2U2q1Lhw16gvLtdm",
+      "endFieldId": "0GtQhyWtyC4viJiYk2v0q",
+      "cardinality": "many_to_one",
+      "fields": [
+        {
+          "startFieldId": "CYXk8lQubnOxVC1-EFsAd",
+          "endFieldId": "0GtQhyWtyC4viJiYk2v0q"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_documento_id_movimiento_movimiento",
+      "id": "KMDIJ-5mpkEZ_L14fv37h"
+    },
+    {
+      "startTableId": "B__Ny2pDnmdGrIeNwFmlS",
+      "startFieldId": "RMpaFAaaYjIGegmvMXA39",
+      "endTableId": "hrp1mBrMV3OvAv_S7DVpV",
+      "endFieldId": "ALy5b3iXXEGpTJeFLEX1X",
+      "cardinality": "many_to_one",
+      "fields": [
+        {
+          "startFieldId": "RMpaFAaaYjIGegmvMXA39",
+          "endFieldId": "ALy5b3iXXEGpTJeFLEX1X"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_cuenta_id_usuario_usuario",
+      "id": "-Jno5Mfiqa-F2_8c_SIIy"
+    },
+    {
+      "startTableId": "hrp1mBrMV3OvAv_S7DVpV",
+      "startFieldId": "ALy5b3iXXEGpTJeFLEX1X",
+      "endTableId": "uF8sJ6JIyjnP87pm77s15",
+      "endFieldId": "mmDN3YCU6lj5Ec4HbnFyp",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "ALy5b3iXXEGpTJeFLEX1X",
+          "endFieldId": "mmDN3YCU6lj5Ec4HbnFyp"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_usuario_id_usuario_categoria",
+      "id": "qWncuUWJMn4VI-nxznu2r"
+    },
+    {
+      "startTableId": "no-ci2U2q1Lhw16gvLtdm",
+      "startFieldId": "XIH-siDhDpZgAvYdosfHP",
+      "endTableId": "PKKw3HWI197b0O0yHMLrb",
+      "endFieldId": "_-rhDVSIF6jGxM86zDEr-",
+      "cardinality": "many_to_one",
+      "fields": [
+        {
+          "startFieldId": "XIH-siDhDpZgAvYdosfHP",
+          "endFieldId": "_-rhDVSIF6jGxM86zDEr-"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_movimiento_id_moneda_moneda",
+      "id": "eV7Za5Afp4LZnCgxcyFNC"
+    },
+    {
+      "startTableId": "uF8sJ6JIyjnP87pm77s15",
+      "startFieldId": "pDKVf62MSpVYIb5QjuObh",
+      "endTableId": "uF8sJ6JIyjnP87pm77s15",
+      "endFieldId": "41vQgabq2uTVFeDL4JzZo",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "pDKVf62MSpVYIb5QjuObh",
+          "endFieldId": "41vQgabq2uTVFeDL4JzZo"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_categoria_id_categoria_padre_categoria",
+      "id": "trZfMBmcRB578H6OecBja"
+    },
+    {
+      "startTableId": "hrp1mBrMV3OvAv_S7DVpV",
+      "startFieldId": "ALy5b3iXXEGpTJeFLEX1X",
+      "endTableId": "oV1nCfLZ-EtFJb5pnZida",
+      "endFieldId": "Ua6qDda2iuwKE2U5zRtpe",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "ALy5b3iXXEGpTJeFLEX1X",
+          "endFieldId": "Ua6qDda2iuwKE2U5zRtpe"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_usuario_id_usuario_comercio",
+      "id": "4LIx1ldMRG3h8uVS2Ot_j"
+    },
+    {
+      "startTableId": "no-ci2U2q1Lhw16gvLtdm",
+      "startFieldId": "Zf1M6MkXGHvKN2AzmrL4A",
+      "endTableId": "oV1nCfLZ-EtFJb5pnZida",
+      "endFieldId": "oVUQLhtGQ0V8OwwH8VvD_",
+      "cardinality": "many_to_one",
+      "fields": [
+        {
+          "startFieldId": "Zf1M6MkXGHvKN2AzmrL4A",
+          "endFieldId": "oVUQLhtGQ0V8OwwH8VvD_"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_movimiento_id_comercio_comercio",
+      "id": "KoXa1-kc106tFO9huPnp8"
+    },
+    {
+      "startTableId": "B__Ny2pDnmdGrIeNwFmlS",
+      "startFieldId": "FloLb4giGihHxRHeC_CpO",
+      "endTableId": "PKKw3HWI197b0O0yHMLrb",
+      "endFieldId": "_-rhDVSIF6jGxM86zDEr-",
+      "cardinality": "many_to_one",
+      "fields": [
+        {
+          "startFieldId": "FloLb4giGihHxRHeC_CpO",
+          "endFieldId": "_-rhDVSIF6jGxM86zDEr-"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_cuenta_id_moneda_moneda",
+      "id": "0ayU2tNsDVduU2VKQQcFL"
+    },
+    {
+      "startTableId": "hrp1mBrMV3OvAv_S7DVpV",
+      "startFieldId": "ALy5b3iXXEGpTJeFLEX1X",
+      "endTableId": "3YwQ6eHadkELNCu7xGLso",
+      "endFieldId": "4Xb1zJMpa0-Fi7H02VpLw",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "ALy5b3iXXEGpTJeFLEX1X",
+          "endFieldId": "4Xb1zJMpa0-Fi7H02VpLw"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_usuario_id_usuario_recurrencia",
+      "id": "D4DtOsTNf7UMSnmu5h3-i"
+    },
+    {
+      "startTableId": "uF8sJ6JIyjnP87pm77s15",
+      "startFieldId": "41vQgabq2uTVFeDL4JzZo",
+      "endTableId": "3YwQ6eHadkELNCu7xGLso",
+      "endFieldId": "mex5x3BElX6_0pxes81Wu",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "41vQgabq2uTVFeDL4JzZo",
+          "endFieldId": "mex5x3BElX6_0pxes81Wu"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_categoria_id_categoria_recurrencia",
+      "id": "Hq_34ZYlfVtjew3LcfXhJ"
+    },
+    {
+      "startTableId": "B__Ny2pDnmdGrIeNwFmlS",
+      "startFieldId": "AAkxb5kMPwwDlxGC3-WMF",
+      "endTableId": "EfV0ryoNNlFRYO96dZWgT",
+      "endFieldId": "cfugcxpDJrb4ClPhojQuW",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "AAkxb5kMPwwDlxGC3-WMF",
+          "endFieldId": "cfugcxpDJrb4ClPhojQuW"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_cuenta_id_cuenta_tarjeta_credito",
+      "id": "VNuRK_WSOIhYxGbmlltQW"
+    },
+    {
+      "startTableId": "no-ci2U2q1Lhw16gvLtdm",
+      "startFieldId": "sg6EkWj_084Y5GI5U4xld",
+      "endTableId": "no-ci2U2q1Lhw16gvLtdm",
+      "endFieldId": "0GtQhyWtyC4viJiYk2v0q",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "sg6EkWj_084Y5GI5U4xld",
+          "endFieldId": "0GtQhyWtyC4viJiYk2v0q"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_movimiento_id_movimiento_padre_movimiento",
+      "id": "6P9NGndCsjzMXi20Ge0x5"
+    },
+    {
+      "startTableId": "hrp1mBrMV3OvAv_S7DVpV",
+      "startFieldId": "ALy5b3iXXEGpTJeFLEX1X",
+      "endTableId": "brzA8J5Je56DRtSKnekGx",
+      "endFieldId": "hm-NoxlAzO05Ij9ZDae-d",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "ALy5b3iXXEGpTJeFLEX1X",
+          "endFieldId": "hm-NoxlAzO05Ij9ZDae-d"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_usuario_id_usuario_etiquetas",
+      "id": "cSdQ1oxragRY6_ZVyBvjj"
+    },
+    {
+      "startTableId": "p5tWt2UEmzbyH1vTr1NDs",
+      "startFieldId": "-MiE3ReP0sjA7ZzrQLhDi",
+      "endTableId": "no-ci2U2q1Lhw16gvLtdm",
+      "endFieldId": "0GtQhyWtyC4viJiYk2v0q",
+      "cardinality": "one_to_one",
+      "fields": [
+        {
+          "startFieldId": "-MiE3ReP0sjA7ZzrQLhDi",
+          "endFieldId": "0GtQhyWtyC4viJiYk2v0q"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_etiqueta_movimiento_id_movimiento_movimiento",
+      "id": "U6xHwIaR2o4wIjN3abOxG"
+    },
+    {
+      "startTableId": "brzA8J5Je56DRtSKnekGx",
+      "startFieldId": "f_nBdL04J_-8gmQObdp7p",
+      "endTableId": "p5tWt2UEmzbyH1vTr1NDs",
+      "endFieldId": "yFbbM7CF3oCOgYGHNBt8P",
+      "cardinality": "one_to_one",
+      "fields": [
+        {
+          "startFieldId": "f_nBdL04J_-8gmQObdp7p",
+          "endFieldId": "yFbbM7CF3oCOgYGHNBt8P"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_etiqueta_id_etiqueta_etiqueta_movimiento",
+      "id": "zy7S93gkBsDxI_CL0-Yzt"
+    },
+    {
+      "startTableId": "hrp1mBrMV3OvAv_S7DVpV",
+      "startFieldId": "ALy5b3iXXEGpTJeFLEX1X",
+      "endTableId": "ZDY_Cs6EhxySUFFWgzRHG",
+      "endFieldId": "L0ekxkqumuE8kZ28mrprY",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "ALy5b3iXXEGpTJeFLEX1X",
+          "endFieldId": "L0ekxkqumuE8kZ28mrprY"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_usuario_id_usuario_producto",
+      "id": "Hy8z0_ChCq3soMW6L_ZLn"
+    },
+    {
+      "startTableId": "no-ci2U2q1Lhw16gvLtdm",
+      "startFieldId": "0GtQhyWtyC4viJiYk2v0q",
+      "endTableId": "ZDY_Cs6EhxySUFFWgzRHG",
+      "endFieldId": "-jx4_t3v1zWTb27mdBJY-",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "0GtQhyWtyC4viJiYk2v0q",
+          "endFieldId": "-jx4_t3v1zWTb27mdBJY-"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_movimiento_id_movimiento_producto",
+      "id": "1WrTTzqlzh2OlMCEq_UTW"
+    },
+    {
+      "startTableId": "no-ci2U2q1Lhw16gvLtdm",
+      "startFieldId": "0GtQhyWtyC4viJiYk2v0q",
+      "endTableId": "3YwQ6eHadkELNCu7xGLso",
+      "endFieldId": "6DenkE0F4pUPQuy8WNTXW",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "0GtQhyWtyC4viJiYk2v0q",
+          "endFieldId": "6DenkE0F4pUPQuy8WNTXW"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_movimiento_id_movimiento_recurrencia",
+      "id": "i24jBZz9mJ2-SumkiP8F3"
+    },
+    {
+      "startTableId": "oV1nCfLZ-EtFJb5pnZida",
+      "startFieldId": "oVUQLhtGQ0V8OwwH8VvD_",
+      "endTableId": "ZDY_Cs6EhxySUFFWgzRHG",
+      "endFieldId": "O55ph3a92lZPV1vgK0ToZ",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "oVUQLhtGQ0V8OwwH8VvD_",
+          "endFieldId": "O55ph3a92lZPV1vgK0ToZ"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_comercio_id_comercio_producto",
+      "id": "JI7HKsWyQys69g86p4uAO"
+    }
+  ],
+  "notes": [],
+  "subjectAreas": [],
+  "database": "postgresql",
+  "types": [],
+  "enums": [],
+  "title": "Control de gastos"
+}
