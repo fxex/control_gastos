@@ -163,8 +163,8 @@ ON UPDATE NO ACTION ON DELETE NO ACTION;
 ALTER TABLE "cuenta"
 ADD FOREIGN KEY("id_usuario") REFERENCES "usuario"("id_usuario")
 ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "usuario"
-ADD FOREIGN KEY("id_usuario") REFERENCES "categoria"("id_usuario")
+ALTER TABLE "categoria"
+ADD FOREIGN KEY("id_usuario") REFERENCES "usuario"("id_usuario")
 ON UPDATE NO ACTION ON DELETE NO ACTION;
 ALTER TABLE "movimiento"
 ADD FOREIGN KEY("id_moneda") REFERENCES "moneda"("id_moneda")
@@ -172,8 +172,8 @@ ON UPDATE NO ACTION ON DELETE NO ACTION;
 ALTER TABLE "categoria"
 ADD FOREIGN KEY("id_categoria_padre") REFERENCES "categoria"("id_categoria")
 ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "usuario"
-ADD FOREIGN KEY("id_usuario") REFERENCES "comercio"("id_usuario")
+ALTER TABLE "comercio"
+ADD FOREIGN KEY("id_usuario") REFERENCES "usuario"("id_usuario")
 ON UPDATE NO ACTION ON DELETE NO ACTION;
 ALTER TABLE "movimiento"
 ADD FOREIGN KEY("id_comercio") REFERENCES "comercio"("id_comercio")
@@ -181,36 +181,36 @@ ON UPDATE NO ACTION ON DELETE NO ACTION;
 ALTER TABLE "cuenta"
 ADD FOREIGN KEY("id_moneda") REFERENCES "moneda"("id_moneda")
 ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "usuario"
-ADD FOREIGN KEY("id_usuario") REFERENCES "recurrencia"("id_usuario")
+ALTER TABLE "recurrencia"
+ADD FOREIGN KEY("id_usuario") REFERENCES "usuario"("id_usuario")
 ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "categoria"
-ADD FOREIGN KEY("id_categoria") REFERENCES "recurrencia"("id_categoria")
+ALTER TABLE "recurrencia"
+ADD FOREIGN KEY("id_categoria") REFERENCES "categoria"("id_categoria")
 ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "cuenta"
-ADD FOREIGN KEY("id_cuenta") REFERENCES "tarjeta_credito"("id_cuenta")
+ALTER TABLE "tarjeta_credito"
+ADD FOREIGN KEY("id_cuenta") REFERENCES "cuenta"("id_cuenta")
 ON UPDATE NO ACTION ON DELETE NO ACTION;
 ALTER TABLE "movimiento"
 ADD FOREIGN KEY("id_movimiento_padre") REFERENCES "movimiento"("id_movimiento")
 ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "usuario"
-ADD FOREIGN KEY("id_usuario") REFERENCES "etiqueta"("id_usuario")
+ALTER TABLE "etiqueta"
+ADD FOREIGN KEY("id_usuario") REFERENCES "usuario"("id_usuario")
 ON UPDATE NO ACTION ON DELETE NO ACTION;
 ALTER TABLE "etiqueta_movimiento"
 ADD FOREIGN KEY("id_movimiento") REFERENCES "movimiento"("id_movimiento")
 ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "etiqueta"
-ADD FOREIGN KEY("id_etiqueta") REFERENCES "etiqueta_movimiento"("id_etiqueta")
+ALTER TABLE "etiqueta_movimiento"
+ADD FOREIGN KEY("id_etiqueta") REFERENCES "etiqueta"("id_etiqueta")
 ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "usuario"
-ADD FOREIGN KEY("id_usuario") REFERENCES "producto"("id_usuario")
+ALTER TABLE "producto"
+ADD FOREIGN KEY("id_usuario") REFERENCES "usuario"("id_usuario")
 ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "movimiento"
-ADD FOREIGN KEY("id_movimiento") REFERENCES "producto"("id_movimiento")
+ALTER TABLE "producto"
+ADD FOREIGN KEY("id_movimiento") REFERENCES "movimiento"("id_movimiento")
 ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "movimiento"
-ADD FOREIGN KEY("id_movimiento") REFERENCES "recurrencia"("id_movimiento")
+ALTER TABLE "recurrencia"
+ADD FOREIGN KEY("id_movimiento") REFERENCES "movimiento"("id_movimiento")
 ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "comercio"
-ADD FOREIGN KEY("id_comercio") REFERENCES "producto"("id_comercio")
+ALTER TABLE "producto"
+ADD FOREIGN KEY("id_comercio") REFERENCES "comercio"("id_comercio")
 ON UPDATE NO ACTION ON DELETE NO ACTION;
