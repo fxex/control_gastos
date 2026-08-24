@@ -2,6 +2,7 @@ package usuario
 
 import (
 	"context"
+	"errors"
 
 	"github.com/jackc/pgx/v5/pgxpool"
 )
@@ -16,7 +17,7 @@ func NewRepository(db *pgxpool.Pool) *Repository {
 	}
 }
 
-func (r *Repository) Crear(
+func (r *Repository) CrearUsuario(
 	ctx context.Context,
 	input CrearUsuarioRequest,
 ) (Usuario, error) {
@@ -95,4 +96,96 @@ func (r *Repository) ObtenerUsuarios(
 	}
 
 	return usuarios, nil
+}
+
+func (r *Repository) ObtenerUsuarioPorId(
+	ctx context.Context,
+	id int64,
+) (Usuario, error) {
+	var usuario Usuario
+
+	err := r.db.QueryRow(
+		ctx,
+		`
+			SELECT
+				id_usuario,
+				nombre,
+				correo,
+				fecha_creacion
+			from usuario
+			where id_usuario = $1
+		`,
+		id,
+	).Scan(
+		&usuario.ID,
+		&usuario.Nombre,
+		&usuario.Correo,
+		&usuario.FechaCreacion,
+	)
+
+	if err != nil {
+		return Usuario{}, err
+	}
+	return usuario, nil
+}
+
+func (r *Repository) ActualizarUsuario(
+	ctx context.Context,
+	input CrearUsuarioRequest,
+	id int64,
+) (Usuario, error) {
+	var usuario Usuario
+
+	err := r.db.QueryRow(
+		ctx,
+		`
+		update usuario set 
+			nombre = $1,
+			correo = $2 
+		where id_usuario = $3
+		Returning
+			id_usuario,
+			nombre,
+			correo,
+			fecha_creacion
+		`,
+		input.Nombre,
+		input.Correo,
+		id,
+	).Scan(
+		&usuario.ID,
+		&usuario.Nombre,
+		&usuario.Correo,
+		&usuario.FechaCreacion,
+	)
+
+	if err != nil {
+		return Usuario{}, err
+	}
+
+	return usuario, nil
+}
+
+func (r *Repository) EliminarUsuario(
+	ctx context.Context,
+	id int64,
+) error {
+	resultado, err := r.db.Exec(
+		ctx,
+		`
+		DELETE FROM usuario
+		WHERE id_usuario = $1
+		`,
+		id,
+	)
+
+	if err != nil {
+		return err
+	}
+
+	if resultado.RowsAffected() == 0 {
+		return errors.New("usuario no encontrado")
+	}
+
+	return nil
 }
