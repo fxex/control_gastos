@@ -3,7 +3,7 @@ package usuario
 import (
 	"encoding/json"
 	"net/http"
-	"strconv"
+	"uuid"
 )
 
 type Handler struct {
@@ -80,7 +80,7 @@ func (h *Handler) ObtenerUsuarioPorId(
 	req *http.Request,
 ) {
 	idUsuarioTexto := req.PathValue("id")
-	idUsuario, err := strconv.ParseInt(idUsuarioTexto, 10, 64)
+	idUsuario, err := uuid.Parse(idUsuarioTexto)
 	if err != nil {
 		http.Error(
 			res,
@@ -115,7 +115,7 @@ func (h *Handler) ActualizarUsuario(
 	res http.ResponseWriter,
 	req *http.Request,
 ) {
-	idUsuario, err := strconv.ParseInt(req.PathValue("id"), 10, 64)
+	idUsuario, err := uuid.Parse(req.PathValue("id"))
 	if err != nil {
 		http.Error(
 			res,
@@ -124,7 +124,7 @@ func (h *Handler) ActualizarUsuario(
 		)
 		return
 	}
-	var input CrearUsuarioRequest
+	var input ActualizarUsuarioRequest
 	if err := json.NewDecoder(req.Body).Decode(&input); err != nil {
 		http.Error(
 			res,
@@ -161,7 +161,7 @@ func (h *Handler) EliminarUsuario(
 	res http.ResponseWriter,
 	req *http.Request,
 ) {
-	idUsuario, err := strconv.ParseInt(req.PathValue("id"), 10, 64)
+	idUsuario, err := uuid.Parse(req.PathValue("id"))
 	if err != nil {
 		http.Error(
 			res,

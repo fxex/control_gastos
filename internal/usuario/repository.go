@@ -3,6 +3,7 @@ package usuario
 import (
 	"context"
 	"errors"
+	"uuid"
 
 	"github.com/jackc/pgx/v5/pgxpool"
 )
@@ -65,6 +66,7 @@ func (r *Repository) ObtenerUsuarios(
 			correo,
 			fecha_creacion
 		from usuario
+		where activo = true
 		order by id_usuario
 		`,
 	)
@@ -100,7 +102,7 @@ func (r *Repository) ObtenerUsuarios(
 
 func (r *Repository) ObtenerUsuarioPorId(
 	ctx context.Context,
-	id int64,
+	id uuid.UUID,
 ) (Usuario, error) {
 	var usuario Usuario
 
@@ -131,8 +133,8 @@ func (r *Repository) ObtenerUsuarioPorId(
 
 func (r *Repository) ActualizarUsuario(
 	ctx context.Context,
-	input CrearUsuarioRequest,
-	id int64,
+	input ActualizarUsuarioRequest,
+	id uuid.UUID,
 ) (Usuario, error) {
 	var usuario Usuario
 
@@ -141,8 +143,10 @@ func (r *Repository) ActualizarUsuario(
 		`
 		update usuario set 
 			nombre = $1,
-			correo = $2 
-		where id_usuario = $3
+			correo = $2, 
+			actualizado_por = $3,
+			fecha_actualizacion = now()
+		where id_usuario = $4
 		Returning
 			id_usuario,
 			nombre,
@@ -151,6 +155,7 @@ func (r *Repository) ActualizarUsuario(
 		`,
 		input.Nombre,
 		input.Correo,
+		input.Usuario,
 		id,
 	).Scan(
 		&usuario.ID,
@@ -168,13 +173,14 @@ func (r *Repository) ActualizarUsuario(
 
 func (r *Repository) EliminarUsuario(
 	ctx context.Context,
-	id int64,
+	id uuid.UUID,
 ) error {
 	resultado, err := r.db.Exec(
 		ctx,
 		`
-		DELETE FROM usuario
-		WHERE id_usuario = $1
+		update usuario set 
+		activo = false
+		where id_usuario
 		`,
 		id,
 	)

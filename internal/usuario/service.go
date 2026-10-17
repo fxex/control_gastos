@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/mail"
 	"strings"
+	"uuid"
 )
 
 type Service struct {
@@ -43,18 +44,15 @@ func (s *Service) ObtenerUsuarios(
 
 func (s *Service) ObtenerUsuarioPorId(
 	ctx context.Context,
-	id int64,
+	id uuid.UUID,
 ) (Usuario, error) {
-	if id < 1 {
-		return Usuario{}, errors.New("El id del usuario debe ser mayor a 0")
-	}
 	return s.repository.ObtenerUsuarioPorId(ctx, id)
 }
 
 func (s *Service) ActualizarUsuario(
 	ctx context.Context,
-	id int64,
-	input CrearUsuarioRequest,
+	id uuid.UUID,
+	input ActualizarUsuarioRequest,
 ) (Usuario, error) {
 	input.Nombre = strings.TrimSpace(input.Nombre)
 	if input.Nombre == "" {
@@ -70,7 +68,7 @@ func (s *Service) ActualizarUsuario(
 
 func (s *Service) EliminarUsuario(
 	ctx context.Context,
-	id int64,
+	id uuid.UUID,
 ) error {
 	return s.repository.EliminarUsuario(ctx, id)
 }
