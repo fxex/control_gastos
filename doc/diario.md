@@ -59,6 +59,12 @@ pnpm exec tsc --noEmit
 pnpm build
 ```
 
+### Sistema de componentes
+
+Se incorporó shadcn/ui como sistema base de componentes. La configuración fue adaptada para que los componentes generados por el CLI se almacenen en `src/core/_components`, respetando la convención del proyecto.
+
+Se agregaron y comenzaron a utilizar los componentes `Button`, `Input`, `Label` y `Card`. Los componentes se mantienen dentro del repositorio para poder adaptar estilos, accesibilidad y comportamiento sin depender de una librería visual cerrada.
+
 ### Pendientes para el próximo cambio grande
 
 - Confirmar con el equipo Go el formato definitivo de respuestas y cookies.

@@ -1,4 +1,6 @@
 import type { InputHTMLAttributes } from "react";
+import { Input } from "@/core/_components/input";
+import { Label } from "@/core/_components/label";
 
 type TextFieldProps = InputHTMLAttributes<HTMLInputElement> & {
   label: string;
@@ -10,10 +12,10 @@ export function TextField({ label, error, id, className = "", ...props }: TextFi
 
   return (
     <div className="space-y-2">
-      <label htmlFor={inputId} className="block text-sm font-semibold text-[#28463a]">
+      <Label htmlFor={inputId} className="block text-sm font-semibold text-[#28463a]">
         {label}
-      </label>
-      <input
+      </Label>
+      <Input
         id={inputId}
         aria-invalid={Boolean(error)}
         aria-describedby={error ? `${inputId}-error` : undefined}

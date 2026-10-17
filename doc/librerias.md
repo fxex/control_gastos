@@ -44,6 +44,19 @@ Reglas específicas para Next.js, React y App Router.
 
 Sistema de estilos utilizado para construir la interfaz responsive sin agregar una librería visual externa. Permite mantener los componentes reutilizables dentro de `src/core/_components`.
 
+### shadcn/ui `4.22.0`
+
+Sistema de componentes reutilizables basado en código fuente dentro del proyecto, no en una dependencia visual cerrada.
+
+Se utiliza para disponer de componentes accesibles y consistentes como `Button`, `Input`, `Label` y `Card`. Los componentes se generan directamente en `src/core/_components` mediante los aliases definidos en `components.json`, por lo que pueden personalizarse según el diseño de Control Gastos.
+
+shadcn/ui utiliza además:
+
+- `@base-ui/react`: primitivas accesibles para controles interactivos.
+- `class-variance-authority`: variantes tipadas de componentes.
+- `lucide-react`: íconos para futuras vistas.
+- `tw-animate-css`: utilidades de animación compatibles con Tailwind.
+
 ### `@tailwindcss/turbopack` `4.3.3`
 
 Integración de Tailwind con el bundler Turbopack de Next.js.

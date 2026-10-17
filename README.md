@@ -1,6 +1,6 @@
 # Control Gastos Web
 
-Frontend de Control Gastos construido con Next.js, TypeScript y pnpm.
+Frontend de Control Gastos construido con Next.js, TypeScript, pnpm y shadcn/ui.
 
 ## Desarrollo
 
@@ -35,6 +35,7 @@ El login y el registro deben devolver la cookie de sesión mediante `Set-Cookie`
 
 - `src/app`: rutas, layouts y Route Handlers.
 - `src/core/_components`: componentes reutilizables para todas las vistas.
+- `components.json`: configuración de shadcn/ui; los nuevos componentes se generan en `src/core/_components`.
 - `src/features/auth`: formularios específicos de autenticación.
 - `src/lib/api`: cliente server-side hacia Go y controles CSRF.
 - `src/lib/auth`: lectura y validación server-side de la sesión.
